@@ -1,0 +1,9 @@
+
+=== what an adaptive block size could buy, at most ===
+     compensator  fixed_1s_hz  oracle_hz  ratio  median_chosen_s
+    persistência      280.973    636.879  2.267              0.3
+filtro alfa-beta    28133.311  39040.823  1.388             10.0
+  ridge (Wiener)    54174.284  69280.436  1.279             10.0
+             MLP    54575.821  69745.379  1.278             10.0
+
+wrote CSVs to runs/realism

@@ -1,0 +1,39 @@
+building the dataset...
+  99252 train rows, 15552 validation rows
+
+=== seed 0 ===
+  variância vs erro: spearman +0.035 (vs erro verdadeiro +0.037)  calibração 1.09  espalhamento 0.23  saturado 0.000  ruído no alvo 0.19
+  somente média                    QBER 0.00725  chave 87709 Hz  disp 0.9989
+  dual-head (sem encolhimento)     QBER 0.00749  chave 87366 Hz  disp 0.9989
+  dual-head                        QBER 0.00739  chave 87468 Hz  disp 0.9989
+
+=== seed 1 ===
+  variância vs erro: spearman +0.026 (vs erro verdadeiro +0.034)  calibração 1.03  espalhamento 0.26  saturado 0.000  ruído no alvo 0.19
+  somente média                    QBER 0.00723  chave 87739 Hz  disp 0.9989
+  dual-head (sem encolhimento)     QBER 0.00754  chave 87309 Hz  disp 0.9988
+  dual-head                        QBER 0.00737  chave 87490 Hz  disp 0.9989
+
+=== seed 2 ===
+  variância vs erro: spearman +0.028 (vs erro verdadeiro +0.034)  calibração 1.00  espalhamento 0.24  saturado 0.000  ruído no alvo 0.19
+  somente média                    QBER 0.00712  chave 87880 Hz  disp 0.9989
+  dual-head (sem encolhimento)     QBER 0.00752  chave 87332 Hz  disp 0.9989
+  dual-head                        QBER 0.00735  chave 87517 Hz  disp 0.9989
+
+  ridge (Wiener)                   QBER 0.00772  chave 87050 Hz
+
+=== summary over seeds ===
+                              mean_qber  qber_std     key_rate   uptime
+compensator                                                            
+somente média                   0.00720   0.00007  87776.15721  0.99889
+dual-head (sem encolhimento)    0.00752   0.00002  87335.49109  0.99883
+dual-head                       0.00737   0.00002  87491.59783  0.99889
+
+ridge (Wiener): QBER 0.00772
+
+=== paired differences over seeds ===
+                                      change  mean_delta_qber   stderr  improvements  regressions
+                   dual-head - somente média         0.000173 0.000027             0            3
+    dual-head - dual-head (sem encolhimento)        -0.000144 0.000021             3            0
+dual-head (sem encolhimento) - somente média         0.000317 0.000043             0            3
+
+wrote CSVs to runs/ablation

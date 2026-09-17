@@ -1,0 +1,33 @@
+
+=== how far does the generalisation reach? ===
+  narrow generalist (45-70 Hz) trained
+  wide generalist (45-180 Hz) trained
+  amplitude generalist trained
+  frequency 50 Hz tested
+  frequency 75 Hz tested
+  frequency 105 Hz tested
+  frequency 165 Hz tested
+  frequency 240 Hz tested
+  amplitude 0.02 rad tested
+  amplitude 0.1 rad tested
+  amplitude 0.2 rad tested
+  amplitude 0.5 rad tested
+
+-- amplitude
+test_point                                   0.02    0.10    0.20    0.50
+who                                                                      
+MLP · especialista, mesma amplitude        0.0003  0.0026  0.0076  0.0311
+MLP · generalista em amplitude             0.0005  0.0027  0.0076  0.0372
+filtro alfa-beta · —                       0.0008  0.0065  0.0241  0.1339
+ridge (Wiener) · generalista em amplitude  0.0018  0.0032  0.0073  0.0374
+
+-- frequência
+test_point                                       50.0    75.0    105.0   165.0   240.0
+who                                                                                   
+MLP · especialista, mesma frequência            0.0095  0.0134  0.0230  0.0305  0.0498
+MLP · generalista estreito (45-70 Hz)           0.0139  0.1087  0.0933  0.0589  0.0672
+MLP · generalista largo (45-180 Hz)             0.0709  0.1014  0.0712  0.1135  0.0485
+filtro alfa-beta · —                            0.0430  0.0420  0.0506  0.0566  0.0477
+ridge (Wiener) · generalista largo (45-180 Hz)  0.0874  0.0299  0.0380  0.0429  0.0400
+
+wrote CSVs to runs/field

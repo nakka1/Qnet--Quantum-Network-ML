@@ -1,0 +1,46 @@
+
+=== can one model cover the band if told where it is? ===
+  janela curta, densa (fase 3) trained, seed 0 (48 features)
+  janela curta, densa (fase 3) trained, seed 1 (48 features)
+  janela curta, densa (fase 3) trained, seed 2 (48 features)
+  janela curta + tom trained, seed 0 (49 features)
+  janela curta + tom trained, seed 1 (49 features)
+  janela curta + tom trained, seed 2 (49 features)
+  janela longa, densa trained, seed 0 (192 features)
+  janela longa, densa trained, seed 1 (192 features)
+  janela longa, densa trained, seed 2 (192 features)
+  janela longa, diluída trained, seed 0 (39 features)
+  janela longa, diluída trained, seed 1 (39 features)
+  janela longa, diluída trained, seed 2 (39 features)
+  janela longa, diluída + tom trained, seed 0 (40 features)
+  janela longa, diluída + tom trained, seed 1 (40 features)
+  janela longa, diluída + tom trained, seed 2 (40 features)
+  references at 50 Hz
+  references at 75 Hz
+  references at 105 Hz
+  references at 165 Hz
+  references at 240 Hz
+Traceback (most recent call last):
+  File "/home/claude/qnet_autopilot/scripts/evaluate_field.py", line 660, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/claude/qnet_autopilot/scripts/evaluate_field.py", line 649, in main
+    print(conditioning.pivot(index="variant", columns="test_frequency_hz",
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/frame.py", line 10974, in pivot
+    return pivot(self, index=index, columns=columns, values=values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/pivot.py", line 910, in pivot
+    result = cast("DataFrame", indexed.unstack(columns_listlike))  # type: ignore[arg-type]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/series.py", line 4501, in unstack
+    return unstack(self, level, fill_value, sort)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 596, in unstack
+    unstacker = _Unstacker(
+                ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 176, in __init__
+    self._make_selectors()
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 232, in _make_selectors
+    raise ValueError("Index contains duplicate entries, cannot reshape")
+ValueError: Index contains duplicate entries, cannot reshape

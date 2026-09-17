@@ -1,0 +1,9 @@
+iter    0  train 0.00  val 0.000 * return -0.688  H 1.552  |g| 0.03
+iter   25  train 0.00  val 0.000 * return -0.682  H 1.599  |g| 0.04
+iter   50  train 0.00  val 0.000 * return -0.688  H 1.546  |g| 0.21
+iter   75  train 0.20  val 0.130 * return -0.499  H 1.297  |g| 0.11
+iter  100  train 0.10  val 0.200 * return -0.429  H 1.106  |g| 0.09
+iter  125  train 0.05  val 0.220 * return -0.389  H 1.030  |g| 0.14
+iter  149  train 0.15  val 0.220 * return -0.393  H 0.985  |g| 0.06
+
+saved runs/agent_corrected/policy.npz and runs/agent_corrected/history.json

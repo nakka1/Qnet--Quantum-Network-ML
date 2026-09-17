@@ -1,0 +1,4 @@
+change,mean_delta_qber,stderr,improvements,regressions
+dual-head - somente média,0.0001728956152161979,2.734363272869243e-05,0,3
+dual-head - dual-head (sem encolhimento),-0.00014441398115506437,2.0994872189978283e-05,3,0
+dual-head (sem encolhimento) - somente média,0.00031730959637126226,4.280075144796242e-05,0,3

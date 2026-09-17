@@ -1,0 +1,28 @@
+=== what the measured spectrum pins the drift rate to ===
+band                  com banda de 60 Hz  sem banda
+drift_rate_rad_per_s                               
+0.005                               1.76       1.86
+0.007                               1.73       1.70
+0.010                               1.60       1.66
+0.015                               1.25       1.18
+0.020                               0.77       0.88
+0.030                               0.31       0.30
+0.050                               0.26       0.25
+0.080                               0.16       0.26
+  measured 1.0 ± 0.2; rates inside it: [0.015, 0.02]
+
+=== the phase-3 comparison, re-run at each operating point ===
+  fase 3 (40 Hz, 0,05 rad/s): done
+  aérea calibrada (60/120/180 Hz, 0,02 rad/s): done
+  só a frequência corrigida (60 Hz, 0,05 rad/s): done
+  só a taxa corrigida (40 Hz, 0,02 rad/s): done
+operating_point             aérea calibrada (60/120/180 Hz, 0,02 rad/s)  fase 3 (40 Hz, 0,05 rad/s)  só a frequência corrigida (60 Hz, 0,05 rad/s)  só a taxa corrigida (40 Hz, 0,02 rad/s)
+who                                                                                                                                                                                        
+MLP (da fase 3)                                                  0.2594                      0.0076                                         0.2621                                   0.0076
+MLP (no ponto)                                                   0.0136                      0.0078                                         0.0134                                   0.0077
+filtro alfa-beta (—)                                             0.0524                      0.0375                                         0.0524                                   0.0375
+persistência (—)                                                 0.1226                      0.1311                                         0.1230                                   0.1310
+ridge (Wiener) (da fase 3)                                       0.2709                      0.0080                                         0.2721                                   0.0079
+ridge (Wiener) (no ponto)                                        0.0133                      0.0080                                         0.0132                                   0.0079
+
+wrote CSVs to runs/field

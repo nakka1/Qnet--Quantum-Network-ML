@@ -1,0 +1,24 @@
+
+=== capacity ===
+  capacity     seed 10  teste 0.917  val 0.983   39298 params  235s
+  capacity     seed 11  teste 0.943  val 0.983   39298 params  225s
+  capacity     seed 12  teste 0.932  val 0.983   39298 params  266s
+  capacity     seed 13  teste 0.873  val 0.950   39298 params  287s
+  capacity     seed 14  teste 0.927  val 0.967   39298 params  301s
+  capacity     seed 15  teste 0.910  val 0.983   39298 params  275s
+  capacity     seed 16  teste 0.920  val 0.942   39298 params  271s
+  capacity     seed 17  teste 0.910  val 0.992   39298 params  287s
+  capacity     seed 18  teste 0.917  val 0.958   39298 params  298s
+  capacity     seed 19  teste 0.927  val 0.975   39298 params  286s
+
+=== summary over seeds ===
+                                label    mean     std    best   worst  parameters  seconds  stderr
+variant                                                                                           
+capacity  + capacidade e treino longo  0.9178  0.0188  0.9425  0.8725       39298   273.14   0.006
+
+=== paired differences (same seeds) ===
+Empty DataFrame
+Columns: []
+Index: []
+
+wrote CSVs to runs/ablation/d

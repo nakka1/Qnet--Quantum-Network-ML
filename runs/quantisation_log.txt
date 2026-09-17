@@ -1,0 +1,54 @@
+calibrating on 3 training trajectories
+  29955 windows recorded
+
+=== word length, whole datapath, 6 held-out seeds ===
+  mlp float: QBER 0.0076
+  mlp 8 bits, CORDIC 16: QBER 0.1312 (17.30x), sat 0
+  mlp 10 bits, CORDIC 16: QBER 0.1323 (17.45x), sat 0
+  mlp 12 bits, CORDIC 16: QBER 0.1679 (22.14x), sat 3
+  mlp 14 bits, CORDIC 16: QBER 0.0080 (1.05x), sat 0
+  mlp 16 bits, CORDIC 16: QBER 0.0077 (1.02x), sat 0
+  mlp 18 bits, CORDIC 16: QBER 0.0076 (1.00x), sat 0
+  mlp 20 bits, CORDIC 16: QBER 0.0076 (1.00x), sat 0
+  mlp 24 bits, CORDIC 16: QBER 0.0076 (1.00x), sat 0
+  ridge float: QBER 0.0080
+  ridge 8 bits, CORDIC 16: QBER 0.1311 (16.47x), sat 0
+  ridge 10 bits, CORDIC 16: QBER 0.1311 (16.47x), sat 0
+  ridge 12 bits, CORDIC 16: QBER 0.1485 (18.67x), sat 3
+  ridge 14 bits, CORDIC 16: QBER 0.0102 (1.28x), sat 0
+  ridge 16 bits, CORDIC 16: QBER 0.0078 (0.98x), sat 0
+  ridge 18 bits, CORDIC 16: QBER 0.0079 (0.99x), sat 0
+  ridge 20 bits, CORDIC 16: QBER 0.0080 (1.00x), sat 0
+  ridge 24 bits, CORDIC 16: QBER 0.0080 (1.00x), sat 0
+
+=== CORDIC depth, at 16 bits ===
+  mlp float: QBER 0.0076
+  mlp 16 bits, CORDIC 6: QBER 0.0079 (1.04x), sat 0
+  mlp 16 bits, CORDIC 8: QBER 0.0077 (1.02x), sat 0
+  mlp 16 bits, CORDIC 10: QBER 0.0077 (1.02x), sat 0
+  mlp 16 bits, CORDIC 12: QBER 0.0077 (1.02x), sat 0
+  mlp 16 bits, CORDIC 16: QBER 0.0077 (1.02x), sat 0
+  mlp 16 bits, CORDIC 20: QBER 0.0077 (1.02x), sat 0
+  ridge float: QBER 0.0080
+  ridge 16 bits, CORDIC 6: QBER 0.0080 (1.00x), sat 0
+  ridge 16 bits, CORDIC 8: QBER 0.0078 (0.98x), sat 0
+  ridge 16 bits, CORDIC 10: QBER 0.0078 (0.98x), sat 0
+  ridge 16 bits, CORDIC 12: QBER 0.0078 (0.98x), sat 0
+  ridge 16 bits, CORDIC 16: QBER 0.0078 (0.98x), sat 0
+  ridge 16 bits, CORDIC 20: QBER 0.0078 (0.98x), sat 0
+
+=== the same widths with the transcendental blocks in float ===
+  mlp float: QBER 0.0076
+  mlp 10 bits, transcendental em float: QBER 0.1324 (17.45x), sat 0
+  mlp 12 bits, transcendental em float: QBER 0.1679 (22.14x), sat 3
+  mlp 14 bits, transcendental em float: QBER 0.0080 (1.05x), sat 0
+  mlp 16 bits, transcendental em float: QBER 0.0077 (1.02x), sat 0
+  mlp 20 bits, transcendental em float: QBER 0.0076 (1.00x), sat 0
+  ridge float: QBER 0.0080
+  ridge 10 bits, transcendental em float: QBER 0.1311 (16.47x), sat 0
+  ridge 12 bits, transcendental em float: QBER 0.1485 (18.67x), sat 3
+  ridge 14 bits, transcendental em float: QBER 0.0102 (1.28x), sat 0
+  ridge 16 bits, transcendental em float: QBER 0.0078 (0.98x), sat 0
+  ridge 20 bits, transcendental em float: QBER 0.0080 (1.00x), sat 0
+
+wrote CSVs to runs/quantisation

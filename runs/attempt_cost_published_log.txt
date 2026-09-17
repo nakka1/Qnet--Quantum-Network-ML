@@ -1,0 +1,18 @@
+
+=== saved policies at deadline x4, attempt cost 0.01 ===
+  agent_control_s2: done
+  agent_long_fix: done
+  agent_corrected_long: done
+              policy  temperature  success  raw_return  vs_greedy_delta  vs_greedy_delta_stderr  vs_greedy_wins  vs_greedy_losses  vs_floor_delta  vs_floor_delta_stderr
+      nao_fazer_nada          NaN    0.000      -0.446           -0.040                   0.078            86.0              74.0           0.000                  0.000
+              random          NaN    0.000      -1.117           -0.714                   0.077            86.0              74.0          -0.656                  0.017
+       shortest_path          NaN    0.306      -0.661           -0.255                   0.047            47.0              68.0          -0.215                  0.077
+     greedy_fidelity          NaN    0.462      -0.406              NaN                     NaN             NaN               NaN           0.040                  0.078
+    agent_control_s2          0.0    0.281      -0.575           -0.168                   0.048            92.0              29.0          -0.128                  0.072
+    agent_control_s2          1.0    0.288      -0.643           -0.228                   0.053            92.0              65.0          -0.186                  0.069
+      agent_long_fix          0.0    0.338      -0.432           -0.025                   0.046            93.0              28.0           0.014                  0.070
+      agent_long_fix          1.0    0.369      -0.502           -0.113                   0.057            98.0              59.0          -0.075                  0.073
+agent_corrected_long          0.0    0.000      -0.446           -0.040                   0.078            86.0              74.0           0.000                  0.000
+agent_corrected_long          1.0    0.000      -1.123           -0.704                   0.077            86.0              74.0          -0.646                  0.021
+
+wrote CSVs to runs/attempt_cost

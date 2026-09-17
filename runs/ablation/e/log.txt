@@ -1,0 +1,24 @@
+
+=== dual_head ===
+  dual_head    seed 10  teste 0.917  val 0.975   54274 params  372s
+  dual_head    seed 11  teste 0.912  val 0.967   54274 params  351s
+  dual_head    seed 12  teste 0.900  val 0.958   54274 params  371s
+  dual_head    seed 13  teste 0.922  val 0.967   54274 params  354s
+  dual_head    seed 14  teste 0.910  val 0.967   54274 params  358s
+  dual_head    seed 15  teste 0.920  val 0.958   54274 params  363s
+  dual_head    seed 16  teste 0.892  val 0.950   54274 params  267s
+  dual_head    seed 17  teste 0.907  val 0.967   54274 params  267s
+  dual_head    seed 18  teste 0.955  val 0.983   54274 params  289s
+  dual_head    seed 19  teste 0.892  val 0.950   54274 params  270s
+
+=== summary over seeds ===
+                                     label   mean     std   best   worst  parameters  seconds  stderr
+variant                                                                                              
+dual_head  dual-head (trunk compartilhado)  0.913  0.0182  0.955  0.8925       54274   326.18  0.0057
+
+=== paired differences (same seeds) ===
+Empty DataFrame
+Columns: []
+Index: []
+
+wrote CSVs to runs/ablation/e

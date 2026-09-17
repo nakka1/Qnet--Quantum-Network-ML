@@ -1,0 +1,18 @@
+
+=== saved policies at deadline x4, attempt cost 0.0025 ===
+  agent_cost_s2: done
+  agent_cost_s5: done
+  agent_cost_s1: done
+         policy  temperature  success  raw_return  vs_greedy_delta  vs_greedy_delta_stderr  vs_greedy_wins  vs_greedy_losses  vs_floor_delta  vs_floor_delta_stderr
+ nao_fazer_nada          NaN    0.000      -0.446           -0.448                   0.060            86.0              74.0           0.000                  0.000
+         random          NaN    0.000      -0.640           -0.643                   0.060            86.0              74.0          -0.180                  0.012
+  shortest_path          NaN    0.306      -0.213           -0.215                   0.039            49.0              66.0           0.233                  0.058
+greedy_fidelity          NaN    0.462       0.002              NaN                     NaN             NaN               NaN           0.448                  0.060
+  agent_cost_s2          0.0    0.400      -0.078           -0.080                   0.024            38.0              43.0           0.368                  0.061
+  agent_cost_s2          1.0    0.412      -0.064           -0.055                   0.047            85.0              63.0           0.370                  0.060
+  agent_cost_s5          0.0    0.456      -0.010           -0.012                   0.014            16.0              18.0           0.436                  0.060
+  agent_cost_s5          1.0    0.419      -0.055            0.018                   0.047            83.0              57.0           0.441                  0.060
+  agent_cost_s1          0.0    0.431      -0.047           -0.049                   0.027            35.0              33.0           0.399                  0.060
+  agent_cost_s1          1.0    0.419      -0.056           -0.062                   0.045            95.0              58.0           0.370                  0.059
+
+wrote CSVs to runs/attempt_cost

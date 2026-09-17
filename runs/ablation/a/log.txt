@@ -1,0 +1,37 @@
+
+=== baseline ===
+  baseline     seed 0  teste 0.877  val 0.925   11458 params  156s
+  baseline     seed 1  teste 0.865  val 0.933   11458 params  177s
+  baseline     seed 2  teste 0.895  val 0.933   11458 params  181s
+
+=== normalised ===
+  normalised   seed 0  teste 0.873  val 0.933   11458 params  200s
+  normalised   seed 1  teste 0.890  val 0.917   11458 params  149s
+  normalised   seed 2  teste 0.917  val 0.967   11458 params  143s
+
+=== capacity ===
+  capacity     seed 0  teste 0.935  val 0.983   39298 params  289s
+  capacity     seed 1  teste 0.948  val 0.983   39298 params  309s
+  capacity     seed 2  teste 0.895  val 0.975   39298 params  285s
+
+=== dual_head ===
+  dual_head    seed 0  teste 0.940  val 0.958   54274 params  291s
+  dual_head    seed 1  teste 0.912  val 0.958   54274 params  277s
+  dual_head    seed 2  teste 0.910  val 0.975   54274 params  332s
+
+=== summary over seeds ===
+                                      label    mean     std    best   worst  parameters   seconds  stderr
+variant                                                                                                  
+baseline             linha de base (fase 2)  0.8792  0.0151  0.8950  0.8650       11458  171.2333  0.0087
+normalised                   + normalização  0.8933  0.0227  0.9175  0.8725       11458  164.1667  0.0131
+capacity        + capacidade e treino longo  0.9258  0.0274  0.9475  0.8950       39298  293.8333  0.0158
+dual_head   dual-head (trunk compartilhado)  0.9208  0.0166  0.9400  0.9100       54274  300.0333  0.0096
+
+=== paired differences (same seeds) ===
+               change    mean  stderr  wins  losses  seeds
+normalised - baseline  0.0142  0.0096     2       1      3
+capacity - normalised  0.0325  0.0275     2       1      3
+ dual_head - capacity -0.0050  0.0153     2       1      3
+ dual_head - baseline  0.0417  0.0140     3       0      3
+
+wrote CSVs to runs/ablation/a

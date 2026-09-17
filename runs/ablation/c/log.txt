@@ -1,0 +1,26 @@
+
+=== capacity ===
+  capacity     seed 5  teste 0.900  val 0.933   39298 params  303s
+  capacity     seed 6  teste 0.910  val 0.958   39298 params  296s
+  capacity     seed 7  teste 0.033  val 0.075   39298 params  261s
+  capacity     seed 8  teste 0.917  val 0.958   39298 params  274s
+  capacity     seed 9  teste 0.912  val 0.975   39298 params  273s
+
+=== dual_head ===
+  dual_head    seed 5  teste 0.922  val 0.958   54274 params  352s
+  dual_head    seed 6  teste 0.915  val 0.967   54274 params  356s
+  dual_head    seed 7  teste 0.897  val 0.967   54274 params  367s
+  dual_head    seed 8  teste 0.938  val 0.975   54274 params  358s
+  dual_head    seed 9  teste 0.922  val 0.975   54274 params  342s
+
+=== summary over seeds ===
+                                     label    mean     std    best   worst  parameters  seconds  stderr
+variant                                                                                                
+capacity       + capacidade e treino longo  0.7345  0.3925  0.9175  0.0325       39298   281.40  0.1755
+dual_head  dual-head (trunk compartilhado)  0.9190  0.0145  0.9375  0.8975       54274   355.08  0.0065
+
+=== paired differences (same seeds) ===
+              change   mean  stderr  wins  losses  seeds
+dual_head - capacity 0.1845  0.1702     5       0      5
+
+wrote CSVs to runs/ablation/c

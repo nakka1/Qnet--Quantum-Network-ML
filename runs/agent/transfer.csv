@@ -1,0 +1,6 @@
+topology,hops,shortest_path,threshold_0.90,actor_critic,agent_stderr
+chain-4 (trained on),3,0.36,0.552,0.864,0.021679852398021532
+chain-5 (deeper),4,0.0,0.004,0.104,0.019306372005117898
+chain-3 (shallower),2,1.0,1.0,1.0,0.0
+"chain-4, 30 km spans",3,0.34,0.18,0.456,0.03150009523795127
+ring-6,3,0.36,0.552,0.776,0.026368466015299408

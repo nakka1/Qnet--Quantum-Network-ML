@@ -1,0 +1,12 @@
+{'seed': 1, 'frequency': 50.0, 'model': 'ridge', 'mean_qber': 0.05130326167433897}
+{'seed': 1, 'frequency': 50.0, 'model': 'mlp', 'mean_qber': 0.014065364226426036}
+{'seed': 1, 'frequency': 60.0, 'model': 'ridge', 'mean_qber': 0.04637474625301433}
+{'seed': 1, 'frequency': 60.0, 'model': 'mlp', 'mean_qber': 0.018085073736122427}
+{'seed': 2, 'frequency': 50.0, 'model': 'ridge', 'mean_qber': 0.05133570570935033}
+{'seed': 2, 'frequency': 50.0, 'model': 'mlp', 'mean_qber': 0.014017868238404918}
+{'seed': 2, 'frequency': 60.0, 'model': 'ridge', 'mean_qber': 0.046349906277973245}
+{'seed': 2, 'frequency': 60.0, 'model': 'mlp', 'mean_qber': 0.017027250280842943}
+frequency    50.0    60.0
+model                    
+mlp        0.0140  0.0176
+ridge      0.0513  0.0464

@@ -1,0 +1,27 @@
+=== 4 policies x 40 seeds, two simulators ===
+-- twin charging 1 span traversals per attempt
+  actor_critic (T=0.5): done
+  shortest_path: done
+  greedy_fidelity: done
+  threshold_0.94: done
+-- twin charging 4.1 span traversals per attempt
+  actor_critic (T=0.5): done
+  shortest_path: done
+  greedy_fidelity: done
+  threshold_0.94: done
+              policy         simulator  success  fidelity  elapsed_ms  attempts  swaps  purifications  disagreements
+actor_critic (T=0.5)          SeQUeNCe    0.250    0.7295     57.0726    15.300  2.450          0.450              0
+actor_critic (T=0.5)   twin (custo x1)    0.900    0.7575     26.5351    11.925  5.125          1.750              0
+actor_critic (T=0.5) twin (custo x4.1)    0.225    0.7111     57.5965    18.175  2.625          0.300              0
+     greedy_fidelity          SeQUeNCe    0.250    0.7206     56.1030    15.100  2.525          0.225              0
+     greedy_fidelity   twin (custo x1)    0.350    0.7282     44.8209    20.325  8.000          4.375              0
+     greedy_fidelity twin (custo x4.1)    0.300    0.7119     53.7728    17.050  2.525          0.250              0
+       shortest_path          SeQUeNCe    0.250    0.7206     56.0589    15.100  2.525          0.000              0
+       shortest_path   twin (custo x1)    0.350    0.7282     44.6740    13.675  5.200          0.000              0
+       shortest_path twin (custo x4.1)    0.300    0.7119     53.8292    17.100  2.575          0.000              0
+      threshold_0.94          SeQUeNCe    0.075    0.7143     64.5264    17.350  2.400          0.750              0
+      threshold_0.94   twin (custo x1)    0.500    0.7575     53.3962    24.125  4.075          9.075              0
+      threshold_0.94 twin (custo x4.1)    0.050    0.7339     64.5069    20.300  2.350          0.975              0
+
+action sets differed on 0 steps (the two simulators agree on what is legal)
+wrote CSVs to runs/sequence

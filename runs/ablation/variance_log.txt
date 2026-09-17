@@ -1,0 +1,14 @@
+=== residual against time since the last cable jump ===
+since_jump_s  rows  share_of_rows  median_squared_error  ratio_to_quiet
+       0.5-2   342         0.0220             6889.5501          1.0423
+       2-inf 12618         0.8113             6578.1021          0.9951
+
+=== ceiling for any variance head ===
+  R2 of a linear fit predicting log squared error: -0.0001
+
+=== what a perfect variance head would be reacting to ===
+  rows within 100 ms of a jump: 0.0000%
+  their share of the total squared error: 0.0000%
+  target noise as a share of the residual: 18.1%
+
+wrote runs/ablation/variance_diagnosis.json

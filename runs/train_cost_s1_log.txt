@@ -1,0 +1,13 @@
+iter    0  train 0.00  val 0.020 * return -0.616  H 1.571  |g| 0.06
+iter   25  train 0.00  val 0.010   return -0.624  H 1.591  |g| 0.02
+iter   50  train 0.05  val 0.030 * return -0.595  H 1.608  |g| 0.04
+iter   75  train 0.20  val 0.250 * return -0.310  H 1.487  |g| 0.07
+iter  100  train 0.20  val 0.410 * return -0.080  H 1.330  |g| 0.07
+iter  125  train 0.15  val 0.490 * return +0.037  H 1.236  |g| 0.03
+iter  150  train 0.45  val 0.420   return -0.055  H 1.289  |g| 0.09
+iter  175  train 0.20  val 0.420   return -0.043  H 1.342  |g| 0.06
+iter  200  train 0.15  val 0.430   return -0.052  H 1.298  |g| 0.03
+iter  225  train 0.40  val 0.470   return +0.021  H 1.246  |g| 0.02
+iter  249  train 0.35  val 0.490 * return +0.042  H 1.237  |g| 0.02
+
+saved runs/agent_cost_s1/policy.npz and runs/agent_cost_s1/history.json

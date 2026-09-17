@@ -1,0 +1,25 @@
+iter    0  train 0.00  val 0.020 * return -1.098  H 1.571  |g| 0.06
+iter   25  train 0.00  val 0.010   return -0.989  H 1.510  |g| 0.12
+iter   50  train 0.00  val 0.000   return -0.475  H 0.137  |g| 0.12
+iter   75  train 0.00  val 0.000   return -0.457  H 0.058  |g| 0.12
+iter  100  train 0.00  val 0.000   return -0.512  H 0.273  |g| 0.04
+iter  125  train 0.00  val 0.000   return -0.494  H 0.193  |g| 0.02
+iter  149  train 0.00  val 0.000   return -0.494  H 0.194  |g| 0.05
+
+saved runs/agent_corrected_long/policy.npz and runs/agent_corrected_long/history.json
+            policy  episodes  success_rate  raw_return  mean_time_ms  mean_fidelity  attempts  purifications  swaps    steps  success_stderr
+            random       400        0.0050     -1.1222      245.7848         0.7175   64.2150         1.0825 1.5400 102.1750          0.0035
+     shortest_path       400        0.3275     -0.6367      192.3703         0.7137   59.4875         0.0000 9.1400  70.8075          0.0235
+   greedy_fidelity       400        0.4575     -0.4236      174.7336         0.7297   55.0650         2.3975 8.5525  66.4725          0.0249
+    threshold_0.90       400        0.2425     -0.9812      241.2227         0.7244   75.9425         6.4725 6.3775  89.0400          0.0214
+    threshold_0.94       400        0.2425     -0.9805      241.0350         0.7213   75.8825         8.1275 5.0750  89.3400          0.0214
+actor_critic (T=1)       400        0.0050     -1.1239      246.3154         0.7132   64.2875         0.9575 1.5000 102.1750          0.0035
+
+paired difference vs each baseline (same episodes, same link outcomes):
+  vs threshold_0.90   -0.237 +/- 0.022   W/L/T 2/97/301
+  vs threshold_0.94   -0.237 +/- 0.021   W/L/T 0/95/305
+  vs shortest_path    -0.323 +/- 0.023   W/L/T 0/129/271
+  vs greedy_fidelity  -0.453 +/- 0.025   W/L/T 0/181/219
+  vs random           +0.000 +/- 0.005   W/L/T 2/2/396
+
+wrote runs/agent_corrected_long/test_results.csv

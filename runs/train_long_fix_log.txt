@@ -1,0 +1,29 @@
+iter    0  train 0.00  val 0.010 * return -1.106  H 1.568  |g| 0.02
+iter   25  train 0.00  val 0.010 * return -0.764  H 1.168  |g| 0.07
+iter   50  train 0.00  val 0.000   return -0.452  H 0.045  |g| 0.10
+iter   75  train 0.00  val 0.010 * return -0.721  H 0.983  |g| 0.09
+iter  100  train 0.00  val 0.010 * return -0.614  H 0.506  |g| 0.17
+iter  125  train 0.15  val 0.270 * return -0.626  H 1.256  |g| 0.12
+iter  150  train 0.30  val 0.330 * return -0.546  H 1.162  |g| 0.05
+iter  175  train 0.15  val 0.330 * return -0.523  H 1.263  |g| 0.11
+iter  200  train 0.30  val 0.380 * return -0.476  H 1.261  |g| 0.09
+iter  225  train 0.30  val 0.420 * return -0.418  H 1.216  |g| 0.06
+iter  249  train 0.40  val 0.420 * return -0.399  H 1.159  |g| 0.07
+
+saved runs/agent_long_fix/policy.npz and runs/agent_long_fix/history.json
+            policy  episodes  success_rate  raw_return  mean_time_ms  mean_fidelity  attempts  purifications  swaps    steps  success_stderr
+            random       400        0.0050     -1.1222      245.7848         0.7175   64.2150         1.0825 1.5400 102.1750          0.0035
+     shortest_path       400        0.3275     -0.6367      192.3703         0.7137   59.4875         0.0000 9.1400  70.8075          0.0235
+   greedy_fidelity       400        0.4575     -0.4236      174.7336         0.7297   55.0650         2.3975 8.5525  66.4725          0.0249
+    threshold_0.90       400        0.2425     -0.9812      241.2227         0.7244   75.9425         6.4725 6.3775  89.0400          0.0214
+    threshold_0.94       400        0.2425     -0.9805      241.0350         0.7213   75.8825         8.1275 5.0750  89.3400          0.0214
+actor_critic (T=1)       400        0.3750     -0.4942      187.5694         0.7188   51.0050         1.8150 7.7600  73.6750          0.0242
+
+paired difference vs each baseline (same episodes, same link outcomes):
+  vs threshold_0.90   +0.133 +/- 0.022   W/L/T 68/15/317
+  vs threshold_0.94   +0.133 +/- 0.021   W/L/T 65/12/323
+  vs shortest_path    +0.048 +/- 0.016   W/L/T 30/11/359
+  vs greedy_fidelity  -0.083 +/- 0.020   W/L/T 18/51/331
+  vs random           +0.370 +/- 0.024   W/L/T 148/0/252
+
+wrote runs/agent_long_fix/test_results.csv

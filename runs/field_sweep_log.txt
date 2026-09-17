@@ -1,0 +1,50 @@
+
+=== the one parameter nobody measured, swept ===
+  0.01 rad done
+  0.02 rad done
+  0.05 rad done
+  0.1 rad done
+  0.2 rad done
+  0.3 rad done
+  0.5 rad done
+compensator       MLP  filtro alfa-beta  persistência  ridge (Wiener)
+amplitude_rad                                                        
+0.01           0.0002            0.0006        0.0016          0.0002
+0.02           0.0003            0.0008        0.0020          0.0003
+0.05           0.0009            0.0020        0.0052          0.0009
+0.10           0.0026            0.0065        0.0163          0.0026
+0.20           0.0076            0.0241        0.0587          0.0075
+0.30           0.0136            0.0524        0.1226          0.0133
+0.50           0.0311            0.1339        0.2783          0.0339
+
+=== does it have to be retrained per link? ===
+  specialists trained
+  generalist trained
+  tested at 45 Hz
+  tested at 50 Hz
+  tested at 60 Hz
+  tested at 70 Hz
+Traceback (most recent call last):
+  File "/home/claude/qnet_autopilot/scripts/evaluate_field.py", line 360, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/claude/qnet_autopilot/scripts/evaluate_field.py", line 352, in main
+    print(robustness.pivot(index="training", columns="test_frequency_hz",
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/frame.py", line 10974, in pivot
+    return pivot(self, index=index, columns=columns, values=values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/pivot.py", line 910, in pivot
+    result = cast("DataFrame", indexed.unstack(columns_listlike))  # type: ignore[arg-type]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/series.py", line 4501, in unstack
+    return unstack(self, level, fill_value, sort)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 596, in unstack
+    unstacker = _Unstacker(
+                ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 176, in __init__
+    self._make_selectors()
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/reshape/reshape.py", line 232, in _make_selectors
+    raise ValueError("Index contains duplicate entries, cannot reshape")
+ValueError: Index contains duplicate entries, cannot reshape

@@ -1,0 +1,103 @@
+%% sbc-template.sty -- reimplementação local do estilo de artigo da SBC.
+%%
+%% O pacote oficial não está disponível neste ambiente (sem acesso a CTAN), e
+%% um artigo que não compila não é um entregável. Este arquivo reproduz o
+%% layout do modelo: A4, Times, 12pt, título e autores centralizados, blocos de
+%% Abstract e Resumo recuados em itálico, seções numeradas em negrito, legendas
+%% de figura e tabela em corpo menor com rótulo em negrito, e bibliografia sem
+%% rótulos com recuo pendente.
+%%
+%% Para submeter à SBC, troque este arquivo pelo sbc-template.sty oficial: os
+%% comandos usados aqui (\title, \author, \address, \email, abstract, resumo,
+%% \keywords) têm a mesma assinatura.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sbc-template}[2026/09/15 Layout SBC (reimplementacao local)]
+
+\RequirePackage[a4paper,left=3.0cm,right=3.0cm,top=3.5cm,bottom=3.0cm]{geometry}
+\RequirePackage{mathptmx}
+\RequirePackage{indentfirst}
+\RequirePackage{setspace}
+\RequirePackage{caption}
+
+%% ---------------------------------------------------------------- título ---
+\renewcommand{\maketitle}{%
+  \begin{center}
+    {\large\bfseries\@title\par}
+    \vskip 1.2em
+    {\normalsize\bfseries\@author\par}
+  \end{center}
+  \vskip 1.0em
+}
+
+\newcommand{\address}[1]{%
+  \begin{center}\normalsize #1\end{center}\vskip 0.4em}
+
+\newcommand{\email}[1]{%
+  \begin{center}\normalsize\texttt{#1}\end{center}\vskip 0.8em}
+
+\newcommand{\nextinstitute}{\\[0.5em]}
+
+%% ------------------------------------------------- abstract e resumo -------
+\renewenvironment{abstract}{%
+  \begin{list}{}{\setlength{\leftmargin}{1.0cm}\setlength{\rightmargin}{0.3cm}}%
+  \item\itshape\noindent\textbf{\textit{Abstract.}}\ }%
+  {\end{list}\vskip 0.4em}
+
+\newenvironment{resumo}{%
+  \begin{list}{}{\setlength{\leftmargin}{1.0cm}\setlength{\rightmargin}{0.3cm}}%
+  \item\itshape\noindent\textbf{\textit{Resumo.}}\ }%
+  {\end{list}\vskip 0.4em}
+
+\newcommand{\keywords}[2]{%
+  \begin{list}{}{\setlength{\leftmargin}{1.0cm}\setlength{\rightmargin}{0.3cm}}%
+  \item\itshape\noindent\textbf{\textit{#1}}: #2
+  \end{list}\vskip 0.8em}
+
+%% -------------------------------------------------------------- seções -----
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+  {2.2ex \@plus 1ex \@minus .2ex}{1.0ex \@plus .2ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+  {1.8ex \@plus 1ex \@minus .2ex}{0.8ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+  {1.5ex \@plus 1ex \@minus .2ex}{0.6ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+
+%% Ponto depois do número da seção, como no modelo ("1. Introdução").
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\hspace{0.6em}}
+
+%% ------------------------------------------------------------- legendas ----
+%% Este ambiente TeX não traz o arquivo de idioma do babel para português, e
+%% um artigo que imprime "Figure 1" numa revista brasileira está errado mesmo
+%% compilando. Os quatro nomes que aparecem no texto são fixados aqui; com o
+%% babel disponível, apague este bloco e carregue [brazilian]{babel}.
+\AtBeginDocument{%
+  \renewcommand{\figurename}{Figura}%
+  \renewcommand{\tablename}{Tabela}%
+  \renewcommand{\refname}{Referências}%
+  \renewcommand{\abstractname}{Resumo}%
+}
+\captionsetup{font=small,labelfont=bf,labelsep=period,
+              justification=centering,width=0.88\textwidth}
+\captionsetup[table]{position=above}
+
+%% -------------------------------------------------------- bibliografia -----
+%% Citações no formato [Autor ano] e lista sem rótulos com recuo pendente,
+%% como no modelo. natbib em modo autor-ano já omite o rótulo; só é preciso
+%% ajustar o separador (o padrão insere vírgula entre autor e ano).
+\RequirePackage[round]{natbib}
+\setcitestyle{square,aysep={},citesep={,}}
+\let\cite\citep
+\renewcommand{\bibsection}{\section*{Referências}}
+\setlength{\bibhang}{1.2em}
+\setlength{\bibsep}{0.55ex}
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.4ex}
+\renewcommand{\baselinestretch}{1.02}
+
+\endinput
